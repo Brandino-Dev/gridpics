@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --color1: #333;
+    --color2: #ddd;
+    --color3: #fff;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+header {
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 20px;
+    text-align: center;
+}
+
+main.grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #3333334f;
+}
+
+.grid_item {
+    border: 5px solid var(--color1);
+    border-radius: 6px;
+}
+
+.grid_item:hover {
+    transition: tranform 0.3 ease;
+    transform: scale(1.05);
+}
+
+.large {
+    grid-column: span 2;
+}
+
+.grid_item img {
+    width: 100%;
+    display: block;
+}
+
+footer {
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 20px;
+    text-align: center;
+}
+
